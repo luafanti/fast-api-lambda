@@ -1,5 +1,6 @@
 from fastapi import FastAPI, HTTPException
 from pydantic import BaseModel
+from mangum import Mangum
 
 app = FastAPI()
 
@@ -43,3 +44,5 @@ async def put_feedback(body: Message):
         return {"statusCode": 200}
     else:
         raise HTTPException(status_code=400, detail="Invalid request")
+
+handler = Mangum(app)

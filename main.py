@@ -45,4 +45,9 @@ async def put_feedback(body: Message):
     else:
         raise HTTPException(status_code=400, detail="Invalid request")
 
+
+@app.get("/health")
+async def health_check():
+    return {"status": "OK"}
+
 handler = Mangum(app)

@@ -1,0 +1,13 @@
+__pycache__
+*.pyc
+*.pyo
+*.pyd
+*.pyc
+*.log
+*.sql
+*.sqlite
+.env
+.venv
+.git
+.github
+.idea

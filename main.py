@@ -42,8 +42,8 @@ async def metadata_generation(body: Message):
 
 @app.get("/asset-management/v1/metadata/feedback")
 async def get_feedback():
-    mongo_db_secret = get_aws_secret()
-    return {"message": "Feedback retrieved successfully", "secret": mongo_db_secret}
+    # mongo_db_secret = get_aws_secret()
+    return {"message": "Feedback retrieved successfully"}
 
 
 @app.post("/asset-management/v1/metadata-generation")
